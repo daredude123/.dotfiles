@@ -6,11 +6,10 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
 require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = {'jdtls','lua_ls'},
-require('lspconfig').lua_ls.setup({})
+	require('lspconfig').lua_ls.setup({})
 	handlers = {
 		lsp_zero.default_setup,
 	},

@@ -9,19 +9,19 @@ return require('packer').startup(function(use)
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		requires = { {'nvim-lua/plenary.nvim'} }
-	} 
+	}
 
-	-- rose pine colorscheme 
+	-- rose pine colorscheme
 	use({ 'rose-pine/neovim',
 	as = 'rose-pine',
-	config = function() 
+	config = function()
 		vim.cmd("colorscheme rose-pine")
 	end
 })
 -- Treesitter
 use({'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}})
 use('nvim-treesitter/playground')
-use('nvim-lua/plenary.nvim') 
+use('nvim-lua/plenary.nvim')
 use('ThePrimeagen/harpoon')
 use('mbbill/undotree')
 use('tpope/vim-fugitive')
